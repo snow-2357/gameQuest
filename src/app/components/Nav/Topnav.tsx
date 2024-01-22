@@ -19,11 +19,11 @@ const Topnav: React.FC<TopnavType> = ({ popUp, handlePopUp }) => {
         <hr className="px-4 bg-gray-200 border-2 dark:bg-gray-700 rounded-full" />
       </button>
       <div className="hidden md:flex gap-1">
-        <div className="p-1 ">Home</div>
+        <div className="p-1 cursor-pointer hover:underline">Home</div>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
-        <div className="p-1 ">Game Store</div>
+        <div className="p-1 cursor-pointer hover:underline">Game Store</div>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
-        <div className="p-1">Leaderboard</div>
+        <div className="p-1 cursor-pointer hover:underline">Leaderboard</div>
       </div>
       <div className="flex gap-1 md:gap-4 justify-end">
         <div className="relative">

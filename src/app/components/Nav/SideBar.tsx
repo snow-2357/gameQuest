@@ -6,31 +6,59 @@ type SideBarProps = {
   handlePopUp: () => void;
 };
 
+type IconType = {
+  title: string;
+  icon: string;
+};
+
 const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
-  const icons: string[] = [
-    "akar-icons_home",
-    "basil_envelope-outline",
-    "ri_store-2-line",
-    "fluent_payment-32-regular",
-    "uiw_appstore-o",
-    "teenyicons_trophy-outline",
-    "solar_settings-outline",
-    "material-symbols_logout-rounded",
+  const icons: IconType[] = [
+    { title: "Home", icon: "akar-icons_home" },
+    { title: "Messahes", icon: "basil_envelope-outline" },
+    { title: "Game Store", icon: "ri_store-2-line" },
+    { title: "Payments", icon: "fluent_payment-32-regular" },
+    { title: "App Store", icon: "uiw_appstore-o" },
+    { title: "Leaderboard", icon: "teenyicons_trophy-outline" },
+    { title: "Settings", icon: "solar_settings-outline" },
+    { title: "Logout", icon: "material-symbols_logout-rounded" },
   ];
 
   return (
     <div className="">
       {/* sliding nav */}
       <div
-        className={`absolute z-50 bg-gray-900 w-48 top-[-42px] ease-in-out p-4 ${
-          !popUp ? "  left-[-200px]" : "left-0"
+        className={`absolute h-screen z-50 bg-gray-500 w-64 top-[-40px] ease-in-out p-0 sm:hidden ${
+          !popUp ? "  left-[-500px]" : "left-0"
         } `}
       >
-        <button onClick={handlePopUp} className="flex flex-col gap-2 md:hidden">
-          close
-        </button>
-        <h1>h1</h1>
-        <h1>hellow</h1>
+        <div className="relative flex justify-center pt-12 pb-4">
+          <h1 className="font-pressStart text-xl">GameQuest</h1>
+          <button
+            onClick={handlePopUp}
+            className="absolute right-2 flex flex-col gap-2 font-pressStart"
+          >
+            x
+          </button>
+        </div>
+
+        {icons.slice(0, 6).map((icon: IconType, index: number) => {
+          return (
+            <div className="flex gap-4  p-6" key={index}>
+              <Icon src={icon.icon} />
+              <h1>{icon.title}</h1>
+            </div>
+          );
+        })}
+        <hr className="px-0 my-16 bg-gray-500 border-1 dark:bg-gray-700 rounded-full" />
+
+        {icons.slice(6, icons.length).map((icon: IconType, index) => {
+          return (
+            <div className="flex gap-4 p-4 py-6" key={index}>
+              <Icon src={icon.icon} />
+              <h1>{icon.title}</h1>
+            </div>
+          );
+        })}
       </div>
       <div
         id="sidebar-mini"
@@ -41,18 +69,18 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
             <h1 className="font-pressStart text-3xl">GQ</h1>
           </div>
 
-          {icons.slice(0, 6).map((icon, index) => {
+          {icons.slice(0, 6).map((icon: IconType, index) => {
             return (
-              <div className="my-4" key={index}>
-                <Icon src={icon} />
+              <div className="my-8" key={index}>
+                <Icon src={icon.icon} />
               </div>
             );
           })}
 
-          {icons.slice(6, icons.length).map((icon, index) => {
+          {icons.slice(6, icons.length).map((icon: IconType, index) => {
             return (
-              <div className="my-4" key={index}>
-                <Icon src={icon} />
+              <div className="my-8" key={index}>
+                <Icon src={icon.icon} />
               </div>
             );
           })}
