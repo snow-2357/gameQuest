@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         heroFont: ["bespax", "sans-serif"],
+        pressStart: ["pressStart", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

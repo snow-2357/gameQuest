@@ -7,6 +7,11 @@
   src: url("/font/Bespax.ttf");
 }
 
+@font-face {
+  font-family: "pressStart";
+  src: url("/font/PressStart2P-Regular.ttf");
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

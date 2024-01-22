@@ -2,9 +2,22 @@ import React from "react";
 import { BsFillHandbagFill, BsPersonFill } from "react-icons/bs";
 import { IoNotifications } from "react-icons/io5";
 
-export default function Topnav() {
+type TopnavType = {
+  popUp: boolean;
+  handlePopUp: () => void;
+};
+
+const Topnav: React.FC<TopnavType> = ({ popUp, handlePopUp }) => {
   return (
-    <div className="m-4 flex flex-row justify-end md:justify-between items-center ">
+    <div className="m-2 my-10 flex flex-row justify-between items-center ">
+      <button
+        onClick={handlePopUp}
+        className="flex flex-col gap-2 mt-[-4px] md:hidden"
+      >
+        <hr className="px-4 bg-gray-200 border-2 dark:bg-gray-700 rounded-full" />
+        <hr className="px-4 bg-gray-200 border-2 dark:bg-gray-700 rounded-full" />
+        <hr className="px-4 bg-gray-200 border-2 dark:bg-gray-700 rounded-full" />
+      </button>
       <div className="hidden md:flex gap-1">
         <div className="p-1 ">Home</div>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
@@ -34,7 +47,7 @@ export default function Topnav() {
           <input
             type="search"
             id="default-search"
-            className="px-4 py-2 ps-10 text-sm text-gray-100  border-2 bg-transparent rounded-full"
+            className="px-4 py-2 ps-12 text-sm text-gray-100 border-2 bg-transparent rounded-full"
             placeholder="What are you looking for?"
           />
         </div>
@@ -59,4 +72,6 @@ export default function Topnav() {
       </div>
     </div>
   );
-}
+};
+
+export default Topnav;
