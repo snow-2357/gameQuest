@@ -6,9 +6,10 @@ export default function Home() {
   return (
     <main className="">
       <SideBar />
-      <div className="ml-20">
+      <div className="ml-4 lg:ml-24 md:mr-4 mr-0">
         <Topnav />
       </div>
+      <h1 className="bold text-5xl font-heroFont">Evolution</h1>
     </main>
   );
 }

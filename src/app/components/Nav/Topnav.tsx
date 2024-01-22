@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFillHandbagFill } from "react-icons/bs";
+import { BsFillHandbagFill, BsPersonFill } from "react-icons/bs";
 import { IoNotifications } from "react-icons/io5";
 
 export default function Topnav() {
@@ -8,13 +8,11 @@ export default function Topnav() {
       <div className="hidden md:flex gap-1">
         <div className="p-1 ">Home</div>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
-        <div className="p-1 ">Game</div>
-        <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
-        <div className="p-1  ">Store</div>
+        <div className="p-1 ">Game Store</div>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
         <div className="p-1">Leaderboard</div>
       </div>
-      <div className="flex gap-4 justify-end">
+      <div className="flex gap-1 md:gap-4 justify-end">
         <div className="relative">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
@@ -26,9 +24,9 @@ export default function Topnav() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>
@@ -40,20 +38,21 @@ export default function Topnav() {
             placeholder="What are you looking for?"
           />
         </div>
-        <div className="flex gap-1 ">
-          <div className="flex gap-1 m-1">
-            <div className="border-2 p-1 rounded-full">
+        <div className="flex">
+          <div className="hidden sm:flex ">
+            <div className="border-2 p-1 my-1 rounded-full ">
               <IoNotifications size={24} />
             </div>
+            <hr className="px-4 my-5 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
+            <div className="border-2 p-1 my-1 rounded-full ">
+              <BsFillHandbagFill size={22} />
+            </div>
+
+            <hr className="px-4 my-5 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
           </div>
-          <div className="hidden sm:flex gap-1 m-1">
-            <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
-            <div className="border-2 p-1 rounded-full">
-              <IoNotifications size={24} />
-            </div>
-            <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
+          <div className="flex my-1">
             <div className="border-2 p-1 rounded-full ">
-              <IoNotifications size={24} />
+              <BsPersonFill size={24} />
             </div>
           </div>
         </div>
