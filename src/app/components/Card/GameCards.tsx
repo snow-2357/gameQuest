@@ -1,5 +1,7 @@
 import React from "react";
 import IndividualCard from "./IndividualCard";
+import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 
 type ProductType = {
   id: number;
@@ -17,18 +19,30 @@ type ProductType = {
 export default async function GameCards() {
   const products: ProductType[] = await getData();
   return (
-    <main className="rounded-lg ">
-      <section>
-        <div className="w-full h-42 overflow-y-scroll no-scrollbar flex space-x-4  overscroll-none p-3 ">
-          {products?.map((product, index: number) => (
-            <IndividualCard
-              key={index}
-              img={product.image}
-              title={product.title}
-            />
-          ))}
+    <main className="bg-red-500 py-14">
+      <div className="ml-2 lg:ml-28 md:mr-4 mr-0 ">
+        <div className="flex flex-row justify-between my-4">
+          <h1 className="font-pressStart px-0 sm:px-2 md:text-4xl text-2xl">
+            Most Trending
+          </h1>
+          <Link href="#" className="flex items-center gap-2">
+            <h2 className="hidden md:block"> GO TO GAME STORE</h2>{" "}
+            <FaArrowRight />
+          </Link>
         </div>
-      </section>
+
+        <section>
+          <div className="w-full h-42 overflow-y-scroll no-scrollbar flex space-x-4  overscroll-none p-3 ">
+            {products?.map((product, index: number) => (
+              <IndividualCard
+                key={index}
+                img={product.image}
+                title={product.title}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }

@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         heroFont: ["bespax", "sans-serif"],
         pressStart: ["pressStart", "sans-serif"],
+        aoboshi: ["Aoboshi", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

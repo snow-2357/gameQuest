@@ -12,6 +12,11 @@
   src: url("/font/PressStart2P-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Aoboshi";
+  src: url("/font/AoboshiOne.ttf");
+}
+
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
