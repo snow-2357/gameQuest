@@ -14,7 +14,7 @@ export default function NavBar() {
           setOpenPopUp((prev) => !prev);
         }}
       />
-      <div className="ml-2 lg:ml-28 md:mr-4 mr-0">
+      <div className="ml-2 lg:ml-28 md:mr-4 mr-0 sticky z-50">
         <Topnav
           popUp={openPopUp}
           handlePopUp={() => {

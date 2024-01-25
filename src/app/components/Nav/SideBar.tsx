@@ -24,7 +24,7 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
   ];
 
   return (
-    <div className="">
+    <div className="sticky top-0 z-50 ">
       {/* sliding nav */}
       <div
         className={`absolute h-screen z-50 bg-gray-500 w-64 top-[-40px] ease-in-out p-0 sm:hidden ${
@@ -62,9 +62,9 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
       </div>
       <div
         id="sidebar-mini"
-        className=" hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform  fixed top-0 start-0 bottom-0 z-[60] w-24 border-r-2 border-gray-500 lg:block lg:translate-x-0 lg:end-auto lg:bottom-0"
+        className="fixed hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform  top-0 start-0 bottom-0 z-[60] w-24 border-r-2 border-gray-500 lg:block lg:translate-x-0 lg:end-auto lg:bottom-0"
       >
-        <div className=" my-8 flex flex-col justify-center items-center gap-y-2 py-4">
+        <div className="my-4 flex flex-col justify-center items-center gap-y-2 py-4">
           <div className="mb-4">
             <h1 className="font-pressStart text-3xl">GQ</h1>
           </div>

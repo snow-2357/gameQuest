@@ -20,7 +20,7 @@ export default async function GameCards() {
   const products: ProductType[] = await getData();
   return (
     <main className="bg-red-500 py-14">
-      <div className="ml-2 lg:ml-28 md:mr-4 mr-0 ">
+      <div className="ml-2 lg:ml-28 md:mr-4 mr-0">
         <div className="flex flex-row justify-between my-4">
           <h1 className="font-pressStart px-0 sm:px-2 md:text-4xl text-2xl">
             Most Trending
