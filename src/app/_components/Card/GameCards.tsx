@@ -22,10 +22,10 @@ export default async function GameCards() {
     <main className="bg-gray-900 py-14">
       <div className="ml-2 lg:ml-28 md:mr-4 mr-0">
         <div className="flex flex-row justify-between my-4">
-          <h1 className="font-pressStart px-0 sm:px-2 md:text-4xl text-2xl">
+          <h1 className="font-pressStart px-0 sm:px-2 ml-4 md:text-4xl text-2xl">
             Most Trending
           </h1>
-          <Link href="#" className="flex items-center gap-2">
+          <Link href="#" className="flex items-center gap-2 mr-4">
             <h2 className="hidden md:block"> GO TO GAME STORE</h2>{" "}
             <FaArrowRight />
           </Link>
