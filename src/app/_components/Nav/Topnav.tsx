@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsFillHandbagFill, BsPersonFill } from "react-icons/bs";
 import { IoNotifications } from "react-icons/io5";
@@ -19,7 +20,9 @@ const Topnav: React.FC<TopnavType> = ({ popUp, handlePopUp }) => {
         <hr className="px-4 bg-gray-200 border-2 dark:bg-gray-700 rounded-full" />
       </button>
       <div className="hidden md:flex gap-1">
-        <div className="p-1 cursor-pointer hover:underline">Home</div>
+        <Link href="/" className="p-1 cursor-pointer hover:underline">
+          Home
+        </Link>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
         <div className="p-1 cursor-pointer hover:underline">Game Store</div>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />

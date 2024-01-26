@@ -9,11 +9,12 @@ type SideBarProps = {
 type IconType = {
   title: string;
   icon: string;
+  url?: string;
 };
 
 const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
   const icons: IconType[] = [
-    { title: "Home", icon: "akar-icons_home" },
+    { title: "Home", icon: "akar-icons_home", url: "/" },
     { title: "Messahes", icon: "basil_envelope-outline" },
     { title: "Game Store", icon: "ri_store-2-line" },
     { title: "Payments", icon: "fluent_payment-32-regular" },
