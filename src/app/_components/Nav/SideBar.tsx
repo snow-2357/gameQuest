@@ -77,7 +77,7 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
 
           {icons.slice(0, 6).map((icon: IconType, index) => {
             return (
-              <div className="relative group my-8" key={index}>
+              <div className="relative group my-8 cursor-pointer" key={index}>
                 <Icon src={icon.icon} />
                 <span className="absolute w-24 flex justify-center top-10 scale-0 rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
                   {icon.title}
@@ -88,7 +88,7 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
 
           {icons.slice(6, icons.length).map((icon: IconType, index) => {
             return (
-              <div className="relative group my-8" key={index}>
+              <div className="relative group my-8 cursor-pointer" key={index}>
                 <Icon src={icon.icon} />
                 <span className="absolute w-24 flex justify-center top-10 scale-0 rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
                   {icon.title}
