@@ -7,7 +7,6 @@ import NavBar from "./_components/Nav/NavBar";
 export default function Home() {
   return (
     <main className="">
-      <NavBar />
       {/* <h1 className="bold text-5xl font-pressStart">Evolution</h1> */}
       {/* game cards */}
       <Hero />
