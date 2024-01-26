@@ -44,7 +44,7 @@ const IndividualCard: React.FC<CardType> = ({
           <h1 className="font-bold text-2xl">$40</h1>
           <button
             type="button"
-            className="text-white bg-yellow-500 hover:bg-yellow-600 rounded-full py-2 w-full"
+            className="text-white bg-yellow-500 hover:bg-yellow-600 rounded-full py-2 w-full active:scale-90"
           >
             Buy Now
           </button>

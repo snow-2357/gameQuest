@@ -24,7 +24,9 @@ const Topnav: React.FC<TopnavType> = ({ popUp, handlePopUp }) => {
           Home
         </Link>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
-        <div className="p-1 cursor-pointer hover:underline">Game Store</div>
+        <Link href="/shop" className="p-1 cursor-pointer hover:underline">
+          Game Store
+        </Link>
         <hr className="px-4 my-4 rotate-90 bg-gray-200 border-1 dark:bg-gray-700" />
         <div className="p-1 cursor-pointer hover:underline">Leaderboard</div>
       </div>
