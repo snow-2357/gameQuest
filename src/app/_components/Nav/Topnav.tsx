@@ -9,7 +9,7 @@ type TopnavType = {
 
 const Topnav: React.FC<TopnavType> = ({ popUp, handlePopUp }) => {
   return (
-    <div className="m-2 mt-6 mb-4 flex flex-row justify-between items-center ">
+    <div className="m-2 mt-6 mb-4 flex flex-row justify-between items-center">
       <button
         onClick={handlePopUp}
         className="flex flex-col gap-2 mt-[-4px] md:hidden"

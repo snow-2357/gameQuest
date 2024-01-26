@@ -4,11 +4,20 @@ import Image from "next/image";
 type CardType = {
   img: string;
   title: string;
+  size?: "small" | "normal";
 };
 
-const IndividualCard: React.FC<CardType> = ({ img, title }) => {
+const IndividualCard: React.FC<CardType> = ({
+  img,
+  title,
+  size = "normal",
+}) => {
   return (
-    <div className="relative cursor-pointer rounded-lg bg-white p-4 text-black">
+    <div
+      className={`${
+        size === "small" && "h-72 w-72"
+      } relative cursor-pointer rounded-lg bg-white p-4 text-black`}
+    >
       <div className="h-80 w-80 transition duration-100 ease-out">
         <Image alt="expimage" className="rounded-xl" src={img} layout="fill" />
       </div>

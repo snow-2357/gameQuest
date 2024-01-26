@@ -25,7 +25,7 @@ export default async function GameCards() {
           <h1 className="font-pressStart px-0 sm:px-2 ml-4 md:text-4xl text-2xl">
             Most Trending
           </h1>
-          <Link href="#" className="flex items-center gap-2 mr-4">
+          <Link href="/shop" className="flex items-center gap-2 mr-4">
             <h2 className="hidden md:block"> GO TO GAME STORE</h2>{" "}
             <FaArrowRight />
           </Link>
