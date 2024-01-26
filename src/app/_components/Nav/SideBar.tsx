@@ -43,7 +43,10 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
 
         {icons.slice(0, 6).map((icon: IconType, index: number) => {
           return (
-            <div className="flex gap-4 p-6" key={index}>
+            <div
+              className="flex gap-4 p-6 hover:bg-gray-600 cursor-pointer"
+              key={index}
+            >
               <Icon src={icon.icon} />
               <h1>{icon.title}</h1>
             </div>
@@ -53,7 +56,10 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
 
         {icons.slice(6, icons.length).map((icon: IconType, index) => {
           return (
-            <div className="flex gap-4 p-4 py-6" key={index}>
+            <div
+              className="flex gap-4 p-4 py-6 hover:bg-gray-600 cursor-pointer"
+              key={index}
+            >
               <Icon src={icon.icon} />
               <h1>{icon.title}</h1>
             </div>
