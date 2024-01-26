@@ -27,12 +27,12 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
     <div className="sticky top-0 z-50 ">
       {/* sliding nav */}
       <div
-        className={`absolute h-screen z-50 bg-gray-500 w-64 top-[-40px] ease-in-out p-0 sm:hidden ${
+        className={`fixed h-[120vh] z-50 bg-gray-500 w-64 top-[-40px] ease-in-out p-0 sm:hidden ${
           !popUp ? "  left-[-500px]" : "left-0"
         } `}
       >
-        <div className="relative flex justify-center pt-12 pb-4">
-          <h1 className="font-pressStart text-xl">GameQuest</h1>
+        <div className="relative flex justify-between pt-20 pb-4">
+          <h1 className="font-pressStart text-xl px-6">GameQuest</h1>
           <button
             onClick={handlePopUp}
             className="absolute right-2 flex flex-col gap-2 font-pressStart"
@@ -43,7 +43,7 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
 
         {icons.slice(0, 6).map((icon: IconType, index: number) => {
           return (
-            <div className="flex gap-4  p-6" key={index}>
+            <div className="flex gap-4 p-6" key={index}>
               <Icon src={icon.icon} />
               <h1>{icon.title}</h1>
             </div>

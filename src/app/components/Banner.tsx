@@ -1,17 +1,23 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 
-export default function Banner() {
+type BannerProps = {
+  url: string;
+  children?: ReactNode;
+};
+
+const Banner: React.FC<BannerProps> = ({ url, children }) => {
   return (
     <div className="relative h-[300px] sm:h-[600px] lg:h-[600px] xl:h-[700px] overflow-x-hidden">
       <Image
         className=""
         alt="banner"
-        src="/Image/709967.png"
+        src={url}
         layout="fill"
         objectFit="cover"
       />
-      <h1 className="absolute font-heroFont text-5xl w-full top-0 mt-8 text-left ml-8 lg:ml-32 md:mr-4 mr-0 mb-4">
+      {children}
+      {/* <h1 className="absolute font-heroFont text-5xl w-full top-0 mt-8 text-left ml-8 lg:ml-32 md:mr-4 mr-0 mb-4">
         daysgone
       </h1>
       <div className="absolute w-full bottom-0 text-left ml-8 lg:ml-32 md:mr-4 mr-0 mb-4">
@@ -23,7 +29,9 @@ export default function Banner() {
           <div className="my-2 w-2 h-2 bg-green-500 drop-shadow-smshadow-lg rounded-full" />
           <span>40 of your friends are playing</span>
         </p>
-      </div>
+      </div> */}
     </div>
   );
-}
+};
+
+export default Banner;
