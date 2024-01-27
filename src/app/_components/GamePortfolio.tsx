@@ -20,7 +20,7 @@ export default function GamePortfolio() {
               beta period with limited access on April 7, 2020, followed by a
               release on June 2, 2020.
             </p>
-            <button className="text-white text-sm md:text-lg bg-yellow-500 px-8 py-2 shadow-md rounded-full font-bold hover:shadow-xl active:scale-90 transition duration-100 cursor-pointer">
+            <button className="text-white text-sm md:text-lg bg-buttonMain px-8 py-2 shadow-md rounded-full font-bold hover:shadow-xl active:scale-90 transition duration-100 cursor-pointer">
               Play Now
             </button>
             <p className="text-sm md:text-lg">Buy now for $40 only</p>

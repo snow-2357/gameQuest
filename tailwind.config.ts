@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors");
 
 const config: Config = {
   content: [
@@ -7,6 +8,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      ...colors,
+      buttonMain: "#E58E27",
+      logoColor: "#DAB785",
+      menuColor: "#3D352A",
+    },
     extend: {
       fontFamily: {
         heroFont: ["bespax", "sans-serif"],

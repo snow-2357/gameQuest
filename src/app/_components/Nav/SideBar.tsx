@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type SideBarProps = {
@@ -16,7 +17,7 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
   const icons: IconType[] = [
     { title: "Home", icon: "akar-icons_home", url: "/" },
     { title: "Messahes", icon: "basil_envelope-outline" },
-    { title: "Game Store", icon: "ri_store-2-line" },
+    { title: "Game Store", icon: "ri_store-2-line", url: "/shop" },
     { title: "Payments", icon: "fluent_payment-32-regular" },
     { title: "App Store", icon: "uiw_appstore-o" },
     { title: "Leaderboard", icon: "teenyicons_trophy-outline" },
@@ -28,12 +29,17 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
     <div className="sticky top-0 z-50 ">
       {/* sliding nav */}
       <div
-        className={`fixed h-[120vh] z-50 bg-gray-500 w-64 top-[-40px] ease-in-out p-0 sm:hidden ${
+        className={`fixed h-[120vh] z-50 bg-menuColor w-64 top-[-40px] ease-in-out p-0 sm:hidden ${
           !popUp ? "  left-[-500px]" : "left-0"
         } `}
       >
         <div className="relative flex justify-between pt-20 pb-4">
-          <h1 className="font-pressStart text-xl px-6">GameQuest</h1>
+          <Link
+            href="/"
+            className="font-pressStart text-xl px-6 text-logoColor"
+          >
+            GameQuest
+          </Link>
           <button
             onClick={handlePopUp}
             className="absolute right-2 flex flex-col gap-2 font-pressStart"
@@ -45,7 +51,7 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
         {icons.slice(0, 6).map((icon: IconType, index: number) => {
           return (
             <div
-              className="flex gap-4 p-6 hover:bg-gray-600 cursor-pointer"
+              className="flex gap-4 p-6 hover:bg-logoColor cursor-pointer"
               key={index}
             >
               <Icon src={icon.icon} />
@@ -58,7 +64,7 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
         {icons.slice(6, icons.length).map((icon: IconType, index) => {
           return (
             <div
-              className="flex gap-4 p-4 py-6 hover:bg-gray-600 cursor-pointer"
+              className="flex gap-4 p-4 py-6 hover:bg-logoColor cursor-pointer"
               key={index}
             >
               <Icon src={icon.icon} />
@@ -73,7 +79,9 @@ const SideBar: React.FC<SideBarProps> = ({ popUp, handlePopUp }) => {
       >
         <div className="my-4 flex flex-col justify-center items-center gap-y-2 py-4">
           <div className="mb-4">
-            <h1 className="font-pressStart text-3xl">GQ</h1>
+            <Link href="/" className="font-pressStart text-logoColor text-3xl">
+              GQ
+            </Link>
           </div>
 
           {icons.slice(0, 6).map((icon: IconType, index) => {

@@ -9,7 +9,7 @@ export default function Hero() {
           daysgone
         </h1>
         <div className="absolute w-full bottom-0 text-left ml-8 lg:ml-32 md:mr-4 mr-0 mb-4">
-          <button className="text-white bg-yellow-500 px-8 py-4 shadow-md rounded-full font-bold hover:shadow-xl active:scale-90 transition duration-100 cursor-pointer">
+          <button className="text-white bg-buttonMain px-8 py-4 shadow-md rounded-full font-bold hover:shadow-xl active:scale-90 transition duration-100 cursor-pointer">
             Try For Free
           </button>
           <p className="">Buy now for $40 only</p>
